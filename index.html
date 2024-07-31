@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>My little princess 💝</title>
+        <link rel="icon" type="img/xicon" href="https://logos-world.net/wp-content/uploads/2023/08/Gift-Heart-Emoji-500x281.png">
+        <link rel="stylesheet" href="idk.css" type="text/css">
+        <style>
+            body {
+                margin: 0;
+                background: url('https://i.pinimg.com/originals/ea/dd/13/eadd13ffa451ad5e12ad9493242e5e70.jpg') no-repeat center center fixed;
+                background-size: cover;
+                color: white;
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+            .heart {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: url('https://i.ibb.co/GQmmPBp/file-4.png') no-repeat center center;
+                background-size: contain;
+                animation: fall 1s linear infinite;
+            }
+            @keyframes fall {
+                0% { transform: translateY(-100px); }
+                100% { transform: translateY(100vh); }
+            }
+            .video-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                margin-top: 40px;
+            }
+            .dedica {
+                margin: 20px;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                background-color: pink;
+                color: white;
+                cursor: pointer;
+                border-radius: 7px;
+                margin: 20px;
+            }
+            button:hover {
+                background-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dedica">
+            <h1>My little princess 💝</h1>
+            <p>Oggi è la festa internazionale della fidanzata. Qui ci sono dei video che abbiamo fatto insieme, ricordi?</p>
+        </div>
+        <div class="video-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mmeowwkitty1/video/7388942642773527841" data-video-id="7388942642773527841" style="max-width: 310px;min-width: 325px;">
+                <section>
+                    <a target="_blank" title="@mmeowwkitty1" href="https://www.tiktok.com/@mmeowwkitty1">@mmeowwkitty1</a>
+                    <p>Video description here</p>
+                    <a target="_blank" title="♬ original sound" href="https://www.tiktok.com/music/original-sound-7388942642773527841">♬ original sound</a>
+                </section>
+            </blockquote>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mmeowwkitty1/video/7390459771201080609" data-video-id="7390459771201080609" style="max-width: 310px;min-width: 325px;">
+                <section>
+                    <a target="_blank" title="@mmeowwkitty1" href="https://www.tiktok.com/@mmeowwkitty1">@mmeowwkitty1</a>
+                    <p>Video description here</p>
+                    <a target="_blank" title="♬ original sound" href="https://www.tiktok.com/music/original-sound-7390459771201080609">♬ original sound</a>
+                </section>
+            </blockquote>
+        </div>
+        <div class="dedica">
+            <p>Amore mio,</p>
+            <p>Ogni momento passato con te è stato un sogno che non voglio mai smettere di vivere. Anche se siamo insieme da poco, ogni attimo è stato colmo di gioia e amore. La tua dolcezza illumina le mie giornate e il tuo sorriso è la mia felicità.</p>
+            <p>Non vedo l'ora di creare nuovi ricordi con te, uno più bello dell'altro. Ti amo con tutto il mio cuore, oggi e sempre.</p>
+            <p>TI AMO 💝</p>
+        </div>
+        <button onclick="startHearts()">CUORICINIII</button>
+        <script>
+            function startHearts() {
+                for (let j = 0; j < 3; j++) {
+                    setTimeout(() => {
+                        for (let i = 0; i < 100; i++) {
+                            createHeart();
+                        }
+                    }, j * 2000);
+                }
+            }
+
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 6000);
+            }
+        </script>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+    </body>
+</html>
